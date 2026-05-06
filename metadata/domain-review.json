@@ -1,0 +1,73 @@
+{
+  "repo": "lumen-tool-render-flow",
+  "language": "Python",
+  "category": "CLI tools",
+  "goal": "Package a Python local lab for render analysis with node-edge fixtures, cycle and reachability reports, and documented operating limits.",
+  "review_model": {
+    "terms": [
+      "file span",
+      "terminal width",
+      "argument risk",
+      "report density"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "file span",
+      "signal": 72,
+      "slack": 39,
+      "drag": 8,
+      "confidence": 55,
+      "score": 214,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "terminal width",
+      "signal": 67,
+      "slack": 45,
+      "drag": 29,
+      "confidence": 60,
+      "score": 152,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "argument risk",
+      "signal": 54,
+      "slack": 54,
+      "drag": 11,
+      "confidence": 73,
+      "score": 202,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "report density",
+      "signal": 60,
+      "slack": 54,
+      "drag": 22,
+      "confidence": 64,
+      "score": 172,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "file span",
+      "signal": 68,
+      "slack": 24,
+      "drag": 20,
+      "confidence": 74,
+      "score": 174,
+      "lane": "ship"
+    }
+  ]
+}
