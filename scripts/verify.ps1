@@ -67,3 +67,7 @@ if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 
 powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-lumen-tool-render-golden.ps1
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-lumen_tool_render_flow-casebook.ps1
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
